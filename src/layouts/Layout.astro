@@ -1,0 +1,85 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = '1962 Lotus Super 7' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A 1962 Lotus Super 7 — the purest driving machine ever built." />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg: #0d0d0d;
+    --bg-section: #111111;
+    --bg-card: #181818;
+    --text: #f0ebe0;
+    --text-muted: #8a8070;
+    --accent: #c9a84c;
+    --accent-light: #e8c96a;
+    --border: #2a2520;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  section {
+    padding: 5rem 1.5rem;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+</style>

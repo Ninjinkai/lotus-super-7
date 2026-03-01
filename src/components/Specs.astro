@@ -1,0 +1,140 @@
+---
+const specs = [
+  {
+    category: 'Engine',
+    rows: [
+      { label: 'Type', value: 'Ford 105E — 4-cylinder OHV' },
+      { label: 'Displacement', value: '997 cc' },
+      { label: 'Bore × stroke', value: '80.96 × 48.41 mm' },
+      { label: 'Power', value: '39 bhp @ 5,000 rpm' },
+      { label: 'Torque', value: '52 lb-ft @ 2,700 rpm' },
+      { label: 'Fuel feed', value: 'Single Solex or Weber downdraught carburettor' },
+    ],
+  },
+  {
+    category: 'Drivetrain',
+    rows: [
+      { label: 'Gearbox', value: 'Ford 4-speed manual' },
+      { label: 'Final drive ratio', value: '4.125 : 1' },
+      { label: 'Drive', value: 'Rear-wheel drive' },
+    ],
+  },
+  {
+    category: 'Chassis & Suspension',
+    rows: [
+      { label: 'Frame', value: 'Multi-tube spaceframe, stressed aluminium panels' },
+      { label: 'Body', value: 'Aluminium over spaceframe; fibreglass nose cone' },
+      { label: 'Front suspension', value: 'Double wishbones, coil springs, telescopic dampers' },
+      { label: 'Rear suspension', value: 'Live axle, coil springs, telescopic dampers' },
+      { label: 'Steering', value: 'Rack and pinion' },
+      { label: 'Brakes', value: 'Lockheed drum, all round' },
+    ],
+  },
+  {
+    category: 'Dimensions & Weight',
+    rows: [
+      { label: 'Wheelbase', value: '88.0 in (2,235 mm)' },
+      { label: 'Track (front)', value: '45.0 in (1,143 mm)' },
+      { label: 'Track (rear)', value: '44.0 in (1,118 mm)' },
+      { label: 'Dry weight', value: '396 kg (873 lb)' },
+    ],
+  },
+  {
+    category: 'Performance',
+    rows: [
+      { label: '0 – 60 mph', value: '~11.5 sec (stock)' },
+      { label: 'Top speed', value: '~88 mph (stock)' },
+      { label: 'Power-to-weight', value: '98 bhp / tonne' },
+    ],
+  },
+];
+---
+
+<section id="specs" class="specs">
+  <div class="container">
+    <p class="section-label">Technical</p>
+    <h2>Specification<br /><em>Sheet</em></h2>
+    <div class="spec-groups">
+      {specs.map((group) => (
+        <div class="spec-group">
+          <h3>{group.category}</h3>
+          <table>
+            <tbody>
+              {group.rows.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .specs {
+    border-bottom: 1px solid var(--border);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+    color: var(--text);
+  }
+
+  h2 em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .spec-groups {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .spec-group h3 {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--border);
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+
+  th, td {
+    padding: 0.65rem 0;
+    font-size: 0.9rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 400;
+    color: var(--text-muted);
+    width: 42%;
+    padding-right: 1.5rem;
+  }
+
+  td {
+    color: var(--text);
+  }
+</style>

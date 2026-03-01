@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Specs from '../components/Specs.astro';
+import Mods from '../components/Mods.astro';
+---
+
+<Layout title="1962 Lotus Super 7">
+  <main>
+    <Hero />
+    <About />
+    <Specs />
+    <Mods />
+  </main>
+  <footer>
+    <div class="container">
+      <span>1962 Lotus Super 7 &mdash; Series II</span>
+      <nav aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#specs">Specs</a>
+        <a href="#mods">Mods</a>
+      </nav>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  footer {
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  footer nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  footer nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  footer nav a:hover {
+    color: var(--accent);
+  }
+</style>

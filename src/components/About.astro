@@ -1,0 +1,134 @@
+---
+---
+
+<section id="about" class="about">
+  <div class="container">
+    <p class="section-label">Origin</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>The Car That<br /><em>Chapman Built</em></h2>
+        <p>
+          Colin Chapman had one governing philosophy: remove everything that isn't essential.
+          The Super 7 was his purest application of that idea — a road car stripped to the
+          barest mechanical truth, where aluminium panels are stretched over a thin
+          spaceframe and nothing separates driver from road.
+        </p>
+        <p>
+          Introduced in 1957 and refined into the Series II by 1960, the Super 7 arrived at
+          a moment when British sports cars were still hand-built curiosities. The Series II
+          brought cleaner lines, a cycle-winged body, and compatibility with the new Ford
+          105E overhead-valve engine — a step change in refinement over the outgoing
+          side-valve unit.
+        </p>
+        <p>
+          By 1962 the Super 7 had matured into something rare: a car that was simultaneously
+          a practical road machine and a genuine club racer. You bought it as a kit, paid less
+          purchase tax, and assembled it yourself. The labour was part of the ownership.
+        </p>
+      </div>
+      <aside class="about-aside">
+        <dl class="provenance">
+          <div>
+            <dt>Chassis series</dt>
+            <dd>Series II</dd>
+          </div>
+          <div>
+            <dt>Production years</dt>
+            <dd>1960 – 1968</dd>
+          </div>
+          <div>
+            <dt>Country</dt>
+            <dd>United Kingdom</dd>
+          </div>
+          <div>
+            <dt>Manufacturer</dt>
+            <dd>Lotus Cars, Cheshunt</dd>
+          </div>
+          <div>
+            <dt>Build type</dt>
+            <dd>Factory kit (customer-assembled)</dd>
+          </div>
+          <div>
+            <dt>Body style</dt>
+            <dd>Open two-seat roadster</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--bg-section);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 720px) {
+    .about-grid {
+      grid-template-columns: 1fr 280px;
+      gap: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  h2 em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-aside {
+    align-self: start;
+  }
+
+  .provenance {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  .provenance div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .provenance div:last-child {
+    border-bottom: none;
+  }
+
+  .provenance dt {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .provenance dd {
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+</style>

@@ -1,0 +1,182 @@
+---
+const mods = [
+  {
+    year: '1962',
+    title: 'Original build',
+    description:
+      'Assembled from factory kit per Lotus build manual. Ford 105E 997cc engine, standard Solex carburettor, Lotus Yellow bodywork with bare-aluminium cycle wings.',
+    type: 'origin',
+  },
+  {
+    year: '1963',
+    title: 'Weber 28/36 DCD carburettor',
+    description:
+      'Solex replaced with a Weber 28/36 DCD downdraught twin-choke. Improved throttle response and a modest bump in top-end power. Standard fitment on many club-prepared 105E cars of the period.',
+    type: 'performance',
+  },
+  {
+    year: '1966',
+    title: 'Engine rebuild — 1,340 cc conversion',
+    description:
+      'Bored and stroked to Ford 116E 1,340 cc specification. New pistons, reground crank, lightened flywheel. Output rises to approximately 55 bhp. The single most effective period modification available to Super 7 owners.',
+    type: 'performance',
+  },
+  {
+    year: '1971',
+    title: 'Front brake conversion — Girling disc',
+    description:
+      'Original Lockheed drums replaced at the front with Girling 9-inch discs. Caliper brackets fabricated to suit the existing uprights. Significantly reduced fade during extended downhill use and track days.',
+    type: 'safety',
+  },
+  {
+    year: '1985',
+    title: 'Spaceframe inspection and re-weld',
+    description:
+      'Full bare-metal strip. Several stress cracks found at rear suspension pickup points — consistent with age on hard-used 7s. All joints cleaned and re-welded by a specialist. Frame re-primed and undersealed.',
+    type: 'restoration',
+  },
+  {
+    year: '1993',
+    title: 'Body off restoration',
+    description:
+      'Complete body-off restoration. Aluminium panels replaced where corroded. Fibreglass nose cone resprayed in original Lotus Yellow. Interior re-trimmed in black vinyl to period pattern.',
+    type: 'restoration',
+  },
+  {
+    year: '2011',
+    title: 'Electronic ignition',
+    description:
+      'Points-and-condenser replaced with a Lumenition OptroniC electronic ignition module. Eliminates contact wear, maintains timing accuracy, and eases cold starting — the one concession to modernity.',
+    type: 'maintenance',
+  },
+];
+
+const typeLabels: Record<string, string> = {
+  origin: 'Origin',
+  performance: 'Performance',
+  safety: 'Safety',
+  restoration: 'Restoration',
+  maintenance: 'Maintenance',
+};
+---
+
+<section id="mods" class="mods">
+  <div class="container">
+    <p class="section-label">Work done</p>
+    <h2>Modifications<br /><em>&amp; History</em></h2>
+    <ol class="timeline">
+      {mods.map((mod) => (
+        <li class="entry">
+          <div class="entry-meta">
+            <span class="entry-year">{mod.year}</span>
+            <span class={`entry-type type-${mod.type}`}>{typeLabels[mod.type]}</span>
+          </div>
+          <div class="entry-body">
+            <h3>{mod.title}</h3>
+            <p>{mod.description}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .mods {
+    background: var(--bg-section);
+    border-bottom: 1px solid var(--border);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+    color: var(--text);
+  }
+
+  h2 em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .timeline {
+    list-style: none;
+    border-left: 1px solid var(--border);
+    padding-left: 0;
+    margin-left: 0.5rem;
+  }
+
+  .entry {
+    position: relative;
+    padding: 0 0 2.5rem 2rem;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+  }
+
+  .entry::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0.4rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+
+  .entry:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 480px) {
+    .entry {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .entry-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 0.1rem;
+  }
+
+  .entry-year {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .entry-type {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: 2px;
+    width: fit-content;
+  }
+
+  .type-origin     { background: #1a2e1a; color: #6aad6a; }
+  .type-performance { background: #2a1f0e; color: var(--accent-light); }
+  .type-safety     { background: #1a1a2e; color: #6a6aad; }
+  .type-restoration { background: #2e1a1a; color: #ad6a6a; }
+  .type-maintenance { background: #1a2a2e; color: #6aadad; }
+
+  .entry-body h3 {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+
+  .entry-body p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+</style>
