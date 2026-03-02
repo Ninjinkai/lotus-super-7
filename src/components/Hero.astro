@@ -3,25 +3,25 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">Series II &middot; 1962</p>
+    <p class="eyebrow">Curated archive &middot; public record</p>
     <h1>
-      Lotus<br />
-      <em>Super 7</em>
+      Joe Petty&rsquo;s<br />
+      <em>1962 Super 7</em>
     </h1>
-    <p class="tagline">Simplify, then add lightness.</p>
+    <p class="tagline">One car, traced through public records and workshop notes.</p>
     <div class="rule"></div>
     <ul class="hero-stats">
       <li>
-        <span class="stat-value">396</span>
-        <span class="stat-label">kg dry weight</span>
+        <span class="stat-value">66</span>
+        <span class="stat-label">public entries</span>
       </li>
       <li>
-        <span class="stat-value">39</span>
-        <span class="stat-label">bhp</span>
+        <span class="stat-value">2016</span>
+        <span class="stat-label">record begins</span>
       </li>
       <li>
-        <span class="stat-value">88"</span>
-        <span class="stat-label">wheelbase</span>
+        <span class="stat-value">JAX, FL</span>
+        <span class="stat-label">home base</span>
       </li>
     </ul>
   </div>
@@ -99,7 +99,7 @@
 
   .tagline {
     font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
+    font-style: normal;
     font-size: clamp(1rem, 2.5vw, 1.4rem);
     color: var(--text-muted);
     margin-bottom: 2.5rem;
@@ -117,6 +117,16 @@
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
+  }
+
+  @media (max-width: 520px) {
+    .hero-stats {
+      gap: 1.5rem;
+    }
+
+    .stat-value {
+      font-size: 1.7rem;
+    }
   }
 
   .stat-value {

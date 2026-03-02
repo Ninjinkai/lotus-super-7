@@ -1,50 +1,34 @@
 ---
 const specs = [
   {
-    category: 'Engine',
+    category: 'Established in the record',
     rows: [
-      { label: 'Type', value: 'Ford 105E — 4-cylinder OHV' },
-      { label: 'Displacement', value: '997 cc' },
-      { label: 'Bore × stroke', value: '80.96 × 48.41 mm' },
-      { label: 'Power', value: '39 bhp @ 5,000 rpm' },
-      { label: 'Torque', value: '52 lb-ft @ 2,700 rpm' },
-      { label: 'Fuel feed', value: 'Single Solex or Weber downdraught carburettor' },
+      { label: 'Model and year', value: '1962 Lotus Super 7 (Series II)' },
+      { label: 'Owner location', value: 'Jacksonville, FL' },
+      { label: 'Jacksonville ownership', value: 'Documented in June 2016 posting' },
+      { label: 'Racing history', value: 'Described as ex-racer in multiple posts' },
+      { label: 'Transmission detail', value: 'Internal Remote arrangement discussed' },
+      { label: 'Shifter detail', value: 'Custom-fabricated shifter documented' },
     ],
   },
   {
-    category: 'Drivetrain',
+    category: 'Workshop evidence',
     rows: [
-      { label: 'Gearbox', value: 'Ford 4-speed manual' },
-      { label: 'Final drive ratio', value: '4.125 : 1' },
-      { label: 'Drive', value: 'Rear-wheel drive' },
+      { label: 'Wiring', value: 'Car rewired; near-original electrical layout retained' },
+      { label: 'Exhaust', value: 'Maniflow 4-2-1, 1 3/4 flex, and custom tractor muffler' },
+      { label: 'Wheels/tires', value: '5 1/2 x 13 Silverstone wheels with Kumho 155x13 noted' },
+      { label: 'Fenders', value: '8" originals discussed; replacement pair later sourced' },
+      { label: 'VIN notes', value: 'California VIN process (1971) and two state tags noted' },
     ],
   },
   {
-    category: 'Chassis & Suspension',
+    category: 'Pending confirmation',
     rows: [
-      { label: 'Frame', value: 'Multi-tube spaceframe, stressed aluminium panels' },
-      { label: 'Body', value: 'Aluminium over spaceframe; fibreglass nose cone' },
-      { label: 'Front suspension', value: 'Double wishbones, coil springs, telescopic dampers' },
-      { label: 'Rear suspension', value: 'Live axle, coil springs, telescopic dampers' },
-      { label: 'Steering', value: 'Rack and pinion' },
-      { label: 'Brakes', value: 'Lockheed drum, all round' },
-    ],
-  },
-  {
-    category: 'Dimensions & Weight',
-    rows: [
-      { label: 'Wheelbase', value: '88.0 in (2,235 mm)' },
-      { label: 'Track (front)', value: '45.0 in (1,143 mm)' },
-      { label: 'Track (rear)', value: '44.0 in (1,118 mm)' },
-      { label: 'Dry weight', value: '396 kg (873 lb)' },
-    ],
-  },
-  {
-    category: 'Performance',
-    rows: [
-      { label: '0 – 60 mph', value: '~11.5 sec (stock)' },
-      { label: 'Top speed', value: '~88 mph (stock)' },
-      { label: 'Power-to-weight', value: '98 bhp / tonne' },
+      { label: 'Current engine displacement', value: 'Listed as 1340cc in one post and 1500 pre-crossflow in another' },
+      { label: 'Current carburetor setup', value: 'Webers referenced historically; present setup not confirmed' },
+      { label: 'Brake configuration', value: 'Pedal/master-cylinder details discussed; current setup not explicit' },
+      { label: 'Final drive ratio', value: 'Not confirmed in sourced owner posts' },
+      { label: 'Measured performance', value: 'No owner-verified dyno or timed figures found' },
     ],
   },
 ];
@@ -52,8 +36,8 @@ const specs = [
 
 <section id="specs" class="specs">
   <div class="container">
-    <p class="section-label">Technical</p>
-    <h2>Specification<br /><em>Sheet</em></h2>
+    <p class="section-label">Exhibit card</p>
+    <h2>Specification<br /><em>in Context</em></h2>
     <div class="spec-groups">
       {specs.map((group) => (
         <div class="spec-group">
@@ -136,5 +120,25 @@ const specs = [
 
   td {
     color: var(--text);
+  }
+
+  @media (max-width: 640px) {
+    th, td {
+      display: block;
+      width: 100%;
+      padding: 0.35rem 0;
+    }
+
+    th {
+      padding-top: 0.75rem;
+      padding-right: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding-bottom: 0.75rem;
+    }
   }
 </style>

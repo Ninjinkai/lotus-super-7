@@ -1,69 +1,69 @@
 ---
 const mods = [
   {
-    year: '1962',
-    title: 'Original build',
+    year: '2016',
+    title: 'Jacksonville ownership enters the record',
     description:
-      'Assembled from factory kit per Lotus build manual. Ford 105E 997cc engine, standard Solex carburettor, Lotus Yellow bodywork with bare-aluminium cycle wings.',
-    type: 'origin',
+      'Public entries place the car in Jacksonville in 2016, with owner notes beginning soon after joining USA7s.',
+    type: 'provenance',
   },
   {
-    year: '1963',
-    title: 'Weber 28/36 DCD carburettor',
+    year: '2017',
+    title: 'Engine configuration discussed in service',
     description:
-      'Solex replaced with a Weber 28/36 DCD downdraught twin-choke. Improved throttle response and a modest bump in top-end power. Standard fitment on many club-prepared 105E cars of the period.',
-    type: 'performance',
+      'Owner reports driving with a 1500 pre-crossflow and shares period-correct sourcing notes.',
+    type: 'powertrain',
   },
   {
-    year: '1966',
-    title: 'Engine rebuild — 1,340 cc conversion',
+    year: '2018',
+    title: 'Theft and recovery documented',
     description:
-      'Bored and stroked to Ford 116E 1,340 cc specification. New pistons, reground crank, lightened flywheel. Output rises to approximately 55 bhp. The single most effective period modification available to Super 7 owners.',
-    type: 'performance',
+      'Car, van, and trailer were reported stolen after Norcross British Fayre; follow-up posts document recovery and lessons learned.',
+    type: 'provenance',
   },
   {
-    year: '1971',
-    title: 'Front brake conversion — Girling disc',
+    year: '2021',
+    title: 'Rewiring an ex-racer car',
     description:
-      'Original Lockheed drums replaced at the front with Girling 9-inch discs. Caliper brackets fabricated to suit the existing uprights. Significantly reduced fade during extended downhill use and track days.',
-    type: 'safety',
+      'Posts describe minimal surviving wiring from racing use and a practical near-original rewire strategy.',
+    type: 'electrical',
   },
   {
-    year: '1985',
-    title: 'Spaceframe inspection and re-weld',
+    year: '2023',
+    title: 'Shifter and cockpit details recorded',
     description:
-      'Full bare-metal strip. Several stress cracks found at rear suspension pickup points — consistent with age on hard-used 7s. All joints cleaned and re-welded by a specialist. Frame re-primed and undersealed.',
-    type: 'restoration',
+      'Detailed photos and measurements show internal-remote shifter work, plus seat-belt anchor and cockpit fitment notes.',
+    type: 'chassis',
   },
   {
-    year: '1993',
-    title: 'Body off restoration',
+    year: '2024',
+    title: 'Identity and underbody references added',
     description:
-      'Complete body-off restoration. Aluminium panels replaced where corroded. Fibreglass nose cone resprayed in original Lotus Yellow. Interior re-trimmed in black vinyl to period pattern.',
-    type: 'restoration',
+      'VIN/tag placement notes and tunnel/belly-pan photos are shared to support originality checks and service access.',
+    type: 'provenance',
   },
   {
-    year: '2011',
-    title: 'Electronic ignition',
+    year: '2025',
+    title: 'Pedal, exhaust, and drivetrain notes expanded',
     description:
-      'Points-and-condenser replaced with a Lumenition OptroniC electronic ignition module. Eliminates contact wear, maintains timing accuracy, and eases cold starting — the one concession to modernity.',
-    type: 'maintenance',
+      'Owner provides practical notes on pedal-bracket geometry, custom exhaust components, wheels/fenders, and gearbox-shifter compatibility.',
+    type: 'worklog',
   },
 ];
 
 const typeLabels: Record<string, string> = {
-  origin: 'Origin',
-  performance: 'Performance',
-  safety: 'Safety',
-  restoration: 'Restoration',
-  maintenance: 'Maintenance',
+  provenance: 'Provenance',
+  powertrain: 'Powertrain',
+  electrical: 'Electrical',
+  chassis: 'Chassis',
+  worklog: 'Work log',
 };
 ---
 
 <section id="mods" class="mods">
   <div class="container">
-    <p class="section-label">Work done</p>
-    <h2>Modifications<br /><em>&amp; History</em></h2>
+    <p class="section-label">Archive timeline</p>
+    <h2>Workshop Record<br /><em>&amp; Provenance</em></h2>
     <ol class="timeline">
       {mods.map((mod) => (
         <li class="entry">
@@ -78,6 +78,18 @@ const typeLabels: Record<string, string> = {
         </li>
       ))}
     </ol>
+    <div class="sources">
+      <h3>Source threads</h3>
+      <ul>
+        <li><a href="https://usa7s.net/ips/profile/1625-joe-petty/content/?all_activity=1" target="_blank" rel="noopener noreferrer">Everything posted by Joe Petty</a></li>
+        <li><a href="https://usa7s.net/ips/topic/11982-stolen-7-in-norcross-ga/" target="_blank" rel="noopener noreferrer">Stolen 7 in Norcross Ga.</a></li>
+        <li><a href="https://usa7s.net/ips/topic/15289-wire-harness-design-and-manufacturing/" target="_blank" rel="noopener noreferrer">Wire Harness Design and Manufacturing</a></li>
+        <li><a href="https://usa7s.net/ips/topic/15341-series-2-exhaust/" target="_blank" rel="noopener noreferrer">Series 2 Exhaust</a></li>
+        <li><a href="https://usa7s.net/ips/topic/14552-lotus-seven-s2-shifter/" target="_blank" rel="noopener noreferrer">Lotus Seven S2 Shifter</a></li>
+        <li><a href="https://usa7s.net/ips/topic/14997-seking-vin-location-s/" target="_blank" rel="noopener noreferrer">Seking VIN location [s].</a></li>
+      </ul>
+      <p class="source-note">Where posts describe prior setups or alternatives, entries are retained as historical notes and not treated as current confirmed specification.</p>
+    </div>
   </div>
 </section>
 
@@ -158,13 +170,17 @@ const typeLabels: Record<string, string> = {
     padding: 0.2rem 0.45rem;
     border-radius: 2px;
     width: fit-content;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
   }
 
-  .type-origin     { background: #1a2e1a; color: #6aad6a; }
-  .type-performance { background: #2a1f0e; color: var(--accent-light); }
-  .type-safety     { background: #1a1a2e; color: #6a6aad; }
-  .type-restoration { background: #2e1a1a; color: #ad6a6a; }
-  .type-maintenance { background: #1a2a2e; color: #6aadad; }
+  .type-provenance,
+  .type-powertrain,
+  .type-electrical,
+  .type-chassis,
+  .type-worklog {
+    background: transparent;
+  }
 
   .entry-body h3 {
     font-family: var(--font-body);
@@ -178,5 +194,42 @@ const typeLabels: Record<string, string> = {
     font-size: 0.875rem;
     color: var(--text-muted);
     line-height: 1.7;
+  }
+
+  .sources {
+    margin-top: 3rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+
+  .sources h3 {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .sources ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .sources a {
+    color: var(--text-muted);
+  }
+
+  .sources a:hover {
+    color: var(--accent);
+  }
+
+  .source-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 </style>
