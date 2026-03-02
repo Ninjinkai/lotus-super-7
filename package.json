@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "clean:tmp": "node -e \"const fs=require('fs');for(const d of fs.readdirSync('.')){if(d.startsWith('tmpclaude-')){fs.rmSync(d,{recursive:true,force:true});console.log('removed',d)}}\"",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
