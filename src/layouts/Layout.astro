@@ -33,14 +33,16 @@ const { title = '1962 Lotus Super 7' } = Astro.props;
   }
 
   :root {
-    --bg: #0d0d0d;
-    --bg-section: #111111;
-    --bg-card: #181818;
-    --text: #f0ebe0;
-    --text-muted: #8a8070;
-    --accent: #c9a84c;
-    --accent-light: #e8c96a;
-    --border: #2a2520;
+    --bg: #051a13;
+    --bg-section: #0b241c;
+    --bg-card: #123226;
+    --text: #eef5f1;
+    --text-muted: #b8c8c0;
+    --accent: #f4c542;
+    --accent-light: #ffe184;
+    --border: #6f7d86;
+    --brg: #0f3d2e;
+    --chrome: #c6d0d8;
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
   }
@@ -51,6 +53,7 @@ const { title = '1962 Lotus Super 7' } = Astro.props;
 
   body {
     background-color: var(--bg);
+    background-image: radial-gradient(circle at 12% 12%, #164c39 0%, var(--bg) 45%);
     color: var(--text);
     font-family: var(--font-body);
     font-weight: 300;
@@ -79,7 +82,7 @@ const { title = '1962 Lotus Super 7' } = Astro.props;
     font-weight: 500;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--chrome);
     margin-bottom: 1rem;
   }
 </style>

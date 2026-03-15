@@ -8,7 +8,7 @@
       Joe Petty&rsquo;s<br />
       <em>1962 Super 7</em>
     </h1>
-    <p class="tagline">One car, traced through public records and workshop notes.</p>
+    <p class="tagline">One car, traced through public records and workshop notes &mdash; now presented in British racing green, yellow, and chrome.</p>
     <div class="rule"></div>
     <ul class="hero-stats">
       <li>
@@ -16,18 +16,23 @@
         <span class="stat-label">public entries</span>
       </li>
       <li>
-        <span class="stat-value">2016</span>
-        <span class="stat-label">record begins</span>
+        <span class="stat-value">1960&ndash;1968</span>
+        <span class="stat-label">series ii production window</span>
       </li>
       <li>
-        <span class="stat-value">JAX, FL</span>
-        <span class="stat-label">home base</span>
+        <span class="stat-value">~1,310</span>
+        <span class="stat-label">series ii examples noted</span>
+      </li>
+      <li>
+        <span class="stat-value">1957</span>
+        <span class="stat-label">seven lineage launched</span>
       </li>
     </ul>
   </div>
   <div class="hero-bg" aria-hidden="true">
     <div class="stripe stripe-1"></div>
     <div class="stripe stripe-2"></div>
+    <div class="stripe stripe-3"></div>
   </div>
 </section>
 
@@ -46,7 +51,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    opacity: 0.06;
+    opacity: 0.14;
   }
 
   .stripe {
@@ -59,13 +64,18 @@
 
   .stripe-1 {
     right: 5%;
-    background: var(--accent);
+    background: var(--brg);
   }
 
   .stripe-2 {
-    right: 25%;
-    background: var(--text);
-    opacity: 0.4;
+    right: 30%;
+    background: var(--accent);
+  }
+
+  .stripe-3 {
+    right: 50%;
+    background: var(--chrome);
+    opacity: 0.45;
   }
 
   .hero-inner {
@@ -81,7 +91,7 @@
     font-weight: 500;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--chrome);
     margin-bottom: 1.5rem;
   }
 
@@ -93,7 +103,7 @@
   }
 
   h1 em {
-    color: var(--accent);
+    color: var(--accent-light);
     font-style: italic;
   }
 
@@ -108,7 +118,7 @@
   .rule {
     width: 3rem;
     height: 1px;
-    background: var(--accent);
+    background: var(--chrome);
     margin-bottom: 2.5rem;
   }
 
