@@ -64,7 +64,7 @@ Use these settings in your Cloudflare Pages project:
 - Deploy command (if required):
 
 ```bash
-npx wrangler pages deploy dist --project-name lotus-super-7
+npx wrangler pages deploy dist --project-name lotus-super-7 --branch main
 ```
 
 Important: do **not** use `npx wrangler deploy` for this project. That command deploys a Worker flow and can fail for this static Astro setup.
