@@ -54,13 +54,24 @@ astro.config.mjs
 
 ## Deployment
 
-Build with:
+### Cloudflare Pages (free static hosting)
+
+Use these settings in your Cloudflare Pages project:
+
+- Framework preset: `Astro`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Deploy command (if required):
 
 ```bash
-npm run build
+npx wrangler pages deploy dist --project-name lotus-super-7
 ```
 
-Deploy the generated `dist/` output to your preferred static host.
+Important: do **not** use `npx wrangler deploy` for this project. That command deploys a Worker flow and can fail for this static Astro setup.
+
+Optional environment variable for build stability:
+
+- `NODE_VERSION=20`
 
 ## Repository
 
